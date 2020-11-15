@@ -26,11 +26,11 @@ function CheckoutProudct({id, image, title, price, rating, hideButton}) {
                     {Array(rating)
                     .fill()
                     .map((_, i) => (
-                        <p>⭐</p>
+                        <span><p>⭐</p></span>
                     ))}
                 </div>
                 {!hideButton && (
-                    <button onClick={removeFromBasket}>Remove from basket</button>
+                    <button onClick={removeFromBasket}>Убрать из Корзины</button>
                 )}
                 
             </div>

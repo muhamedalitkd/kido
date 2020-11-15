@@ -23,7 +23,7 @@ function Product({ id, title, image, price, rating }) {
     return (
         <div className="product">
             <div className="product__info">
-                <p>{title}</p>
+                <strong>{title}</strong>
                 <p className="product__price">
                     <small>$</small>
                     <strong>{price}</strong>
@@ -38,7 +38,7 @@ function Product({ id, title, image, price, rating }) {
 
             <img src={image} alt="" />
 
-            <button onClick={addToBasket}>Add to Basket</button>
+            <button className="product__button" onClick={addToBasket}>Добавить в Корзину</button>
         </div>
     )
 }

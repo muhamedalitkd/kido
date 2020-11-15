@@ -10,13 +10,13 @@ function Checkout() {
         <div className="checkout">
             <div className="checkout__left">
                 <img className="checkout__ad" 
-                src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" 
+                src="/images/kido.png" 
                 alt=""/>
 
 
                 <div>
-                    <h3>Hello, {user?.email}</h3>
-                    <h2 className="checkout__title">Your shopping Basket</h2>
+                    <h3>Приветствуем, {user?.email}</h3>
+                    <h2 className="checkout__title">Ваша Корзина</h2>
 
                     {basket.map(item => (
                         <CheckoutProudct 

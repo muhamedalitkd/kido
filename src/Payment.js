@@ -73,12 +73,12 @@ function Payment() {
     return (
         <div className='payment'>
             <h1>
-                Checkout (<Link to="/checkout">{basket.length} items</Link>)
+                К оплате (<Link to="/checkout">{basket.length} вещей</Link>)
             </h1>
             <div className='payment__container'>
                 <div className='payment__section'>
                     <div className='payment__title'>
-                        <h3>Delivery Address</h3>
+                        <h3>Адрес оставки</h3>
                     </div>
                     <div className='payment__address'>
                         <p>{user?.email}</p>
@@ -87,7 +87,7 @@ function Payment() {
                 </div>
                 <div className='payment__section'>
                     <div className='payment__title'>
-                            <h3>Review ites and delivery</h3>
+                            <h3>Проверьте свой заказ</h3>
                     </div>
                     <div className='payment__items'>
                         {basket.map(item => (
@@ -103,7 +103,7 @@ function Payment() {
                 </div>
                 <div className='payment__section'>
                     <div className='payment__title'>
-                            <h3>Payment Method</h3>
+                            <h3>Метод оплаты</h3>
                     </div>
                     <div className='payment__details'>
 
@@ -113,7 +113,7 @@ function Payment() {
                                 <div className='payment__priceContainer'>
                                     <CurrencyFormat 
                                         renderText={(value) => (
-                                            <h3>Order Total: {value}</h3>
+                                            <h3>Общий заказ: {value}</h3>
                                         )}
                                         decimalScale={2}
                                         value={getBasketTotal(basket)}
@@ -124,8 +124,8 @@ function Payment() {
 
                                     <button disabled={processing || disabled || 
                                     succeeded}>
-                                        <span>{processing ? <p>Processing</p> : 
-                                        "Buy Now"}</span>
+                                        <span>{processing ? <p>Идёт процесс</p> : 
+                                        "Оплатить"}</span>
                                     </button>
                                 </div>
 
